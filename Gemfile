@@ -12,7 +12,7 @@ end
 gem 'plek', '1.3.1'
 
 gem 'gds-api-adapters', '~> 26.7'
-gem 'govuk_frontend_toolkit', '0.41.1'
+gem 'govuk_frontend_toolkit', '4.9.0'
 gem 'govuk-content-schema-test-helpers', '~> 1.4.0'
 gem 'sass-rails', '5.0.4'
 
