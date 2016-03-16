@@ -9,7 +9,7 @@ if ENV['SLIMMER_DEV']
 else
   gem 'slimmer', '9.0.0'
 end
-gem 'plek', '1.3.1'
+gem 'plek', '1.12.0'
 
 gem 'gds-api-adapters', '~> 26.7'
 gem 'govuk_frontend_toolkit', '4.9.0'
