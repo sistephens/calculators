@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.5.1'
 
-gem 'unicorn', '4.6.2'
+gem 'unicorn', '5.0.1'
 
 if ENV['SLIMMER_DEV']
   gem 'slimmer', :path => '../slimmer'
