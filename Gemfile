@@ -29,6 +29,6 @@ group :development, :test do
   gem 'ci_reporter_rspec', '~> 1.0.0'
   gem 'webmock', :require => false
   gem 'timecop', '0.6.2.2'
-  gem 'poltergeist', '1.6.0'
+  gem 'poltergeist', '1.9.0'
   gem 'rubocop'
 end
