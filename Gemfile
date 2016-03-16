@@ -24,7 +24,7 @@ gem 'uglifier', '~> 2.7', '>= 2.7.2'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
-  gem 'capybara', '2.4.4'
+  gem 'capybara', '~> 2.6'
   gem 'simplecov-rcov', '0.2.3', :require => false
   gem 'ci_reporter_rspec', '~> 1.0.0'
   gem 'webmock', :require => false
