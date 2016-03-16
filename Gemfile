@@ -23,7 +23,7 @@ gem 'rack_strip_client_ip', '0.0.1'
 gem 'uglifier', '~> 2.7', '>= 2.7.2'
 
 group :development, :test do
-  gem 'rspec-rails', '3.2.1'
+  gem 'rspec-rails', '~> 3.4'
   gem 'capybara', '2.4.4'
   gem 'simplecov-rcov', '0.2.3', :require => false
   gem 'ci_reporter_rspec', '~> 1.0.0'
