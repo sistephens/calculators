@@ -5,7 +5,7 @@ gem 'rails', '4.2.6'
 gem 'unicorn', '5.0.1'
 
 if ENV['SLIMMER_DEV']
-  gem 'slimmer', :path => '../slimmer'
+  gem 'slimmer', path: '../slimmer'
 else
   gem 'slimmer', '9.1.0'
 end
@@ -25,9 +25,9 @@ gem 'uglifier', '~> 2.7', '>= 2.7.2'
 group :development, :test do
   gem 'rspec-rails', '~> 3.4'
   gem 'capybara', '~> 2.6'
-  gem 'simplecov-rcov', '0.2.3', :require => false
+  gem 'simplecov-rcov', '0.2.3', require: false
   gem 'ci_reporter_rspec', '~> 1.0.0'
-  gem 'webmock', :require => false
+  gem 'webmock', require: false
   gem 'timecop', '0.6.2.2'
   gem 'poltergeist', '1.9.0'
   gem 'govuk-lint'
