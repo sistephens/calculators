@@ -44,8 +44,26 @@
           <%= render "starting_children" %>
         </fieldset>
 
+        <fieldset id="tax-claim-duration">
+          <%= step(3, "Choose a tax claim duration:") %>
+          <p>Are you claiming for a part of the tax year for any of your children?</p>
+          <div class="tax-claim-duration<% if @calculator.errors.has_key?(:tax_claim_duration) %> validation-error<% end %>">
+            <% @calculator.errors[:tax_claim_duration].each do |message| %>
+              <p><%= message %></p>
+            <% end -%>
+            <label for="tax_claim_duration_yes" class="selectable">
+              <%= radio_button_tag "tax_claim_duration", "yes" %>
+              Yes
+            </label>
+            <label for="tax_claim_duration_no" class="selectable">
+              <%= radio_button_tag "tax_claim_duration", "no" %>
+              No
+            </label>
+          </div>
+        </fieldset>
+
         <fieldset id="tax-year">
-          <%= step(3, "Choose a tax year:") %>
+          <%= step(4, "Choose a tax year:") %>
           <p>Tax years run from 6 April to 5 April the following year.</p>
           <div class="tax-year<% if @calculator.errors.has_key?(:tax_year) %> validation-error<% end %>">
             <% @calculator.errors[:tax_year].each do |message| %>
@@ -61,7 +79,7 @@
         </fieldset>
 
         <fieldset id="adjusted_income">
-          <%= step(4, "Enter income details for the tax year (optional):") %>
+          <%= step(5, "Enter income details for the tax year (optional):") %>
           <ul>
             <li>don’t combine your household income</li>
             <li>use your partner’s income if it’s higher than yours</li>

@@ -4,7 +4,7 @@ class ChildBenefitTaxCalculator
   include ActiveModel::Validations
 
   attr_reader :adjusted_net_income_calculator, :adjusted_net_income, :children_count,
-    :starting_children, :tax_year
+    :starting_children, :tax_year, :tax_claim_duration
 
   NET_INCOME_THRESHOLD = 50000
   TAX_COMMENCEMENT_DATE = Date.parse('7 Jan 2013')
@@ -18,6 +18,7 @@ class ChildBenefitTaxCalculator
   }
 
   validate :valid_child_dates
+  validates_presence_of :tax_claim_duration, message: "select tax claim duration"
   validates_inclusion_of :tax_year, in: TAX_YEARS.keys.map(&:to_i), message: "select a tax year"
   validate :tax_year_contains_at_least_one_child
 
@@ -27,6 +28,7 @@ class ChildBenefitTaxCalculator
     @children_count = params[:children_count] ? params[:children_count].to_i : 1
     @starting_children = process_starting_children(params[:starting_children])
     @tax_year = params[:year].to_i
+    @tax_claim_duration = params[:tax_claim_duration]
   end
 
   def self.valid_date_params?(params)
